@@ -1,0 +1,22 @@
+在第一周充分理解项目目标需求的基础上，本周我开展了作为后端的准备工作。主要涉及到学习了解springboot框架，以及编程环境的配置和项目的创建。具体来讲，实现了在IntellJIdea平台上java环境的配置，以及构建起了maven的项目框架，能够创建项目和模块。在此基础上，结合数据库小组要使用的Neo4J数据库，在项目中导入jar包，为后续的实践打好基础。再下一周我将与小组成员积极沟通继续推进项目，并且学习如何在maven工程中与数据库实现交互。
+
+第二周：
+学习neo4j数据库基础知识（借助neo4j官网的GraphAcademy中的视频文档介绍以及问答题）
+Cypher语言：是neo4j图数据的查询语言，类似mysql数据库要用sql语句查询，
+springboot框架的部署：idea集成的springboot要钱，新建maven工程在pom中添加依赖。数据库连接要在yml后者propert中进行配置
+
+
+项目结构：
+Entity层：创建类，定义类的属性与数据库的属性保持一致。
+Dao层——声明为接口，主要负责访问数据库，向数据库发送请求以及完成数据的增删改查功能。
+Service层：完成功能设计，存放业务逻辑，不直接操作数据库有接口和接口实现类，提供controller层调用的方法。调用dao层接口，接受dao层返回数据。
+controller层：请求和响应控制。负责前后端的交互，接受前端的请求以及调用service层，接受返回的数据，最后返回具体的页面和数据到客户端。
+
+Q:findById("1").var——自动补全了某些东西
+
+Git：推送（本地的D：/Git_local中）
+step1：git add name.txt/*
+step2：git push origin main -o "备注"
+删除：
+step1：git rm 文件/-r 文件夹名称
+step2：git commit -m "备注"
